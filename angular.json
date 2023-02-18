@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myplaybuddy-experience": {
+    "myplaybuddy-quiz": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myplaybuddy-experience",
+            "outputPath": "dist/myplaybuddy-quiz",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "myplaybuddy-experience:build:production"
+              "browserTarget": "myplaybuddy-quiz:build:production"
             },
             "development": {
-              "browserTarget": "myplaybuddy-experience:build:development"
+              "browserTarget": "myplaybuddy-quiz:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myplaybuddy-experience:build"
+            "browserTarget": "myplaybuddy-quiz:build"
           }
         },
         "test": {
