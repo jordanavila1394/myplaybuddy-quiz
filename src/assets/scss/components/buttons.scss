@@ -1,0 +1,18 @@
+.base--{
+  &btn-generic{
+    cursor: pointer;
+    background-color: $color-pink-1;
+    font-family: "Cuprum", Arial, Helvetica, sans-serif;
+    color: white;
+    border: none;
+    max-width: 100px;
+    font-size: 1.45rem;
+    padding: 10px 6px;
+    line-height: 16px;
+    box-shadow: 0 6px 18px 0 rgb(0 0 0 / 12%);
+    border-radius: 4px;
+    &.grey{
+      background-color: #c6c6c6;
+    }
+  }
+}

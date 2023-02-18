@@ -1,0 +1,243 @@
+<div id="dash-steps" *ngIf="(stepsState$ | async); let stepsState;">
+  <div class="base--title">
+    <span>{{stepsState?.currentStep?.title}}</span>
+  </div>
+  <div class="form-wrapper" [ngSwitch]="stepsState?.currentStep?.id">
+    <div *ngSwitchCase="'0'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'A' ?'active':'']" tabindex="0" (click)="changeStep('0','A')">
+            <svg fill="#c974b0" width="64px" height="64px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+              <g id="SVGRepo_iconCarrier">
+              <defs>
+              <style>.cls-1{fill:none;}</style>
+              </defs>
+              <title>user</title>
+              <path d="M16,4a5,5,0,1,1-5,5,5,5,0,0,1,5-5m0-2a7,7,0,1,0,7,7A7,7,0,0,0,16,2Z"/>
+              <path d="M26,30H24V25a5,5,0,0,0-5-5H13a5,5,0,0,0-5,5v5H6V25a7,7,0,0,1,7-7h6a7,7,0,0,1,7,7Z"/>
+              <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
+              </g>
+              </svg>
+              <div class="title">
+                <span>Da soli</span>
+              </div>
+          </div>
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'B' ?'active':'']" (click)="changeStep('0','B')">
+              <svg fill="#c974b0" width="64px" height="64px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier"> <defs> <style> .cls-1 { fill: none; } </style> </defs> <title>user--multiple</title> <path d="M30,30H28V25a5.0057,5.0057,0,0,0-5-5V18a7.0078,7.0078,0,0,1,7,7Z"/> <path d="M22,30H20V25a5.0059,5.0059,0,0,0-5-5H9a5.0059,5.0059,0,0,0-5,5v5H2V25a7.0082,7.0082,0,0,1,7-7h6a7.0082,7.0082,0,0,1,7,7Z"/> <path d="M20,2V4a5,5,0,0,1,0,10v2A7,7,0,0,0,20,2Z"/> <path d="M12,4A5,5,0,1,1,7,9a5,5,0,0,1,5-5m0-2a7,7,0,1,0,7,7A7,7,0,0,0,12,2Z"/> <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/> </g>
+              </svg>
+              <div class="title">
+                <span>In coppia</span>
+              </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'A'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'AA' ?'active':'']" tabindex="0" (click)="changeStep('A','AA')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Vulva</span>
+              </div>
+          </div>
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'AB' ?'active':'']" (click)="changeStep('A','AB')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Pene</span>
+              </div>
+          </div>
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'AC' ?'active':'']" (click)="changeStep('A','AC')">
+            <img src="assets/images/steps/no-image.png">
+            <div class="title">
+              <span>Ano</span>
+            </div>
+        </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('A','0')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'B'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'BA' ?'active':'']" tabindex="0" (click)="changeStep('B','BA')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Vulva-Pene</span>
+              </div>
+          </div>
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'BB' ?'active':'']" (click)="changeStep('B','BB')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Vulva-Vulva</span>
+              </div>
+          </div>
+          <div class="choose" [ngClass]="[stepsState?.previousStep == 'BC' ?'active':'']" (click)="changeStep('B','BC')">
+            <img src="assets/images/steps/no-image.png">
+            <div class="title">
+              <span>Pene-Pene</span>
+            </div>
+        </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('B','0')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'AA'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" tabindex="0" (click)="searchProducts('AAA')" >
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Con penetrazione</span>
+              </div>
+          </div>
+          <div class="choose"  (click)="searchProducts('AAB')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Senza penetrazione</span>
+              </div>
+          </div>
+
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('AA','A')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'AB'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" tabindex="0" (click)="searchProducts('ABA')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Un solo utilizzo</span>
+              </div>
+          </div>
+          <div class="choose" (click)="searchProducts('ABB')" >
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Riutilizzabile</span>
+              </div>
+          </div>
+
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('AB','A')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'AC'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" tabindex="0" (click)="searchProducts('ACA')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Con vibrazione</span>
+              </div>
+          </div>
+          <div class="choose" (click)="searchProducts('ACB')" >
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Senza vibrazione</span>
+              </div>
+          </div>
+
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('AC','A')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'BA'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" tabindex="0" (click)="searchProducts('BAA')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Per migliorare la penetrazione</span>
+              </div>
+          </div>
+          <div class="choose"  (click)="searchProducts('BAB')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Controllo a distanza</span>
+              </div>
+          </div>
+          <div class="choose" (click)="searchProducts('BAC')" >
+            <img src="assets/images/steps/no-image.png">
+            <div class="title">
+              <span>Molto versatile</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('BA','B')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'BB'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" tabindex="0" (click)="searchProducts('BBA')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Per migliorare la penetrazione</span>
+              </div>
+          </div>
+          <div class="choose" (click)="searchProducts('BBB')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Controllo a distanza</span>
+              </div>
+          </div>
+          <div class="choose" (click)="searchProducts('BBC')" >
+            <img src="assets/images/steps/no-image.png">
+            <div class="title">
+              <span>Molto versatile</span>
+            </div>
+        </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('BB','B')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+    <div *ngSwitchCase="'BC'">
+      <form class="base--form-generic" >
+        <div class="choose-wrapper">
+          <div class="choose" tabindex="0" (click)="searchProducts('BCA')">
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Ano</span>
+              </div>
+          </div>
+          <div class="choose" (click)="searchProducts('BCB')" >
+              <img src="assets/images/steps/no-image.png">
+              <div class="title">
+                <span>Pene</span>
+              </div>
+          </div>
+
+        </div>
+        <div class="form-actions">
+          <button type="button" class="base--btn-generic grey" (click)="changeStep('BC','B')" > Indietro </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+

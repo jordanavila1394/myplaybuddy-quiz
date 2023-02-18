@@ -1,0 +1,54 @@
+#dash-steps{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.8rem;
+ .form-wrapper{
+  width: 100%;
+  .choose-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .choose{
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      width: 250px;
+      padding: 40px 30px 30px;
+      min-height: 250px;
+      border: 2px solid #c974b0;
+      border-radius: 15px;
+      .title{
+        font-family: "Arista", Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #c974b0;
+        @media (max-width: 480px) {
+          font-size: 1rem;
+        }
+      }
+      &:hover, &.active{
+        background-color: #c974b0;
+        svg{
+          fill: white;
+        }
+        .title{
+          color: white;
+        }
+      }
+      @media (max-width: 480px) {
+        min-height: inherit;
+        padding: 0.5rem;
+      }
+    }
+  }
+ }
+
+}

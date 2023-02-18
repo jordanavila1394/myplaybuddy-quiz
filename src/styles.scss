@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Arista";
+  src: local("Arista"), url(./assets/fonts/Arista/Arista-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum"), url(./assets/fonts/Cuprum/Cuprum-Regular.ttf) format("truetype");
+}
+
+//base
+@import 'assets/scss/base/animations';
+@import 'assets/scss/base/colors';
+@import 'assets/scss/base/elements';
+
+//Components
+@import 'assets/scss/components/buttons';
+@import 'assets/scss/components/form';
+
+body {
+  background: rgb(254,208,240);
+  background: linear-gradient(0deg, rgba(254,208,240,1) 0%, rgba(188,235,245,1) 100%);
+}

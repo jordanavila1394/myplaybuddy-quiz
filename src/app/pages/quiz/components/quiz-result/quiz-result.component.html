@@ -1,0 +1,53 @@
+<div id="dash-result">
+  <div class="heading">
+    <div class="base--title">
+
+      <span>Risultati</span>
+    </div>
+
+    <div  [routerLink]="['/quiz']">
+      Torna indietro
+    </div>
+  </div>
+
+  <div class="product-list">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-4 mb-4 mb-lg-0" *ngFor="let product  of this.currentProducts; let i = index">
+            <div class="card m-1">
+
+              <img src="{{product.images[0].medium.url}}"
+                class="card-img-top" alt="Laptop" />
+                <div class="d-flex justify-content-between p-3">
+                  <p class="lead mb-0">{{product.name}}</p>
+                  <!-- <div
+                    class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                    style="width: 35px; height: 35px;">
+                    <p class="text-white mb-0 small">x4</p>
+                  </div> -->
+                </div>
+              <div class="card-body">
+                <!-- <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div> -->
+                <div class="d-flex justify-content-center mb-3">
+                  <h5 class="text-dark mb-0">{{product.price}}</h5>
+                </div>
+
+
+                <div class="d-flex justify-content-center mb-3">
+                  <a href="{{product.link}}" class="btn btn-primary add_to_cart"> <span>Apri dettagli</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
