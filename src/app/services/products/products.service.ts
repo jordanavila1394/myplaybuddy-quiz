@@ -22,4 +22,10 @@ export class ProductsService {
     return this.http.get<any[]>(`${environment.apiUrl}categoryProducts?id_category=${request.id}&page=1&with_all_images=1&image_size=home_default`);
   }
 
+
+  public getCategoryByUrl(url: any): Observable<any> {
+
+    return this.http.get<any[]>(`${url}`);
+  }
+
 }

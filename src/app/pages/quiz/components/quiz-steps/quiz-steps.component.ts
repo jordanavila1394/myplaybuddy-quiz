@@ -66,10 +66,15 @@ export class QuizStepsComponent {
 
   getIdCategoryByStep (idStep: string){
     let categoryId;
-    if(idStep =='BAB'){
-      categoryId = '198';
-    } else{
-      categoryId ='198' ;
+    //ANO
+    if(idStep =='ACA'){
+      categoryId = '132';
+    }
+    if(idStep =='ACB'){
+      categoryId = '177';
+    }
+    if(idStep =='ACC'){
+      categoryId = '236';
     }
 
     return categoryId
